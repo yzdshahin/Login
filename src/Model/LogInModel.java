@@ -5,25 +5,29 @@ package Model;
 public class LogInModel {
 
     public class Person{
-        private String user;
-        private String pass;
+        private String userName;
+        private String password;
 
         public String getUser() {
-            return user;
+            return userName;
         }
 
-        public void setUser(String user) {
-            this.user = user;
+        public void setUser(String userName) {
+            this.userName = userName;
         }
 
         public String getPass() {
-            return pass;
+            return password;
         }
 
-        public void setPass(String pass) {
-            this.pass = pass;
+        public void setPass(String password) {
+            this.password = password;
         }
 
-
+        public Person(String userName,String password){
+            //super();  //don't know it's affect
+            this.userName=userName;
+            this.password=password;
+        }
     }
 }
