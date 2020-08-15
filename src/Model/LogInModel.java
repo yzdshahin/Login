@@ -1,7 +1,7 @@
 package Model;
 
 /**
- * Created by shahin_yzd on 8/14/2020.
+ * Created by shahin_yzd on 8/15/2020.
  */
-public class LogIn {
+public class LogInModel {
 }
