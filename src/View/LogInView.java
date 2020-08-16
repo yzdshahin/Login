@@ -1,5 +1,5 @@
 package View;
-import Model.LogInModel;
+import Model.Person;
 import Model.Person;
 
 import java.io.IOException;
@@ -34,6 +34,6 @@ public class LogInView extends HttpServlet {
     }
 
 
-    }
+
 
 }
