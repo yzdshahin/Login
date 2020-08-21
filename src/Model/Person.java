@@ -24,13 +24,7 @@ package Model;
             this.password = password;
         }
 
-        public Person(String name,String password){
-            //super();  //don't know it's affect
-            this.name=name;
-            this.password=password;
-        }
-        public Person(){
 
-        }
+
     }
 
