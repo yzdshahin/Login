@@ -1,6 +1,5 @@
 package Controller;
-
-import Model.Person;
+import Model.PersonDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,21 +22,16 @@ public class LogInControl extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
 
-        Person person = new Person();
-        person.setUser(name);
-        person.setPass(password);
-
-        request.setAttribute("Person", person);
-
-        boolean validatestatus =person.validate();
-
-        if (validatestatus){
+        if (PersonDAO.check(name,password)){
+            System.out.println("you're welcome");
             RequestDispatcher requestDispatcher= request.getRequestDispatcher("login-success.jsp");
             requestDispatcher.forward(request,response);
         }else {
+            System.out.println("Try again");
             RequestDispatcher requestDispatcher=request.getRequestDispatcher("login-error.jsp");
             requestDispatcher.forward(request,response);
         }
 
     }
+
 }
